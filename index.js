@@ -12,9 +12,7 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(bodyParser.json());
 
-const openai = new OpenAIApi(
-  new Configuration({ apiKey: process.env.OPENAI_API_KEY })
-);
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, });
 
 const getToolType = (question) => {
   const q = question.toLowerCase();
