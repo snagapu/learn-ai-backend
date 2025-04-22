@@ -21,7 +21,7 @@ const getToolType = (question) => {
   return 'explanation';
 };
 
-app.post('/api/tutor', async (req, res) => {
+app.post('https://learn-ai-backend.onrender.com/api/tutor', async (req, res) => {
   const { question } = req.body;
   const tool = getToolType(question);
 
